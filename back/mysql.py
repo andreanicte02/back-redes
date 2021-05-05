@@ -3,7 +3,6 @@ import pymysql.cursors
 
 class Database:
 
-
     def __init__(self):
         self.connection = pymysql.connect(
             host='database',
