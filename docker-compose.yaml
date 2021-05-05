@@ -1,6 +1,19 @@
 version: '3'
 
 services:
+
+  service1:
+    build: back/.
+    container_name: service1
+    volumes:
+      - '.:/backend/code'
+    environment:
+      - SERVNAME=201404104
+    ports:
+    - 5000:5000
+    networks:
+      service_network:
+
   database:
     image: mysql:latest
     command: --default-authentication-plugin=mysql_native_password

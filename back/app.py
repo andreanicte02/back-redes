@@ -1,8 +1,7 @@
-from flask import Flask, request,jsonify
+from flask import Flask, request
 from flask_cors import CORS
 from mysql import Database
 import simplejson as json
-import os
 
 
 app = Flask(__name__)
