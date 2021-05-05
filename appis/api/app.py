@@ -25,7 +25,7 @@ def AgregarUsuario():
 
 
 
-@app.route('/ListarIdEvento', methods=['GET'])
+@app.route('/ListarIdEvento', methods=['POST'])
 def ListarIdEvento():
     content = request.get_json()
     print(content)
@@ -36,7 +36,7 @@ def ListarIdEvento():
 
     return json.dumps(r.json(), 200)
 
-@app.route('/ListarPorCarnet', methods=['GET'])
+@app.route('/ListarPorCarnet', methods=['POST'])
 def ListarPorCarnet():
     content = request.get_json()
     print(content)
